@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Count It</string>
+    <string name="action_settings">Language</string>
+
+    <!-- Toast Messages -->
+    <string name="no_input_title_error">Please input title of the new item.</string>
+    <string name="delete_item_complete">The item has been deleted.</string>
+
+    <!-- POPUP -->
+    <string name="delete_popup_yes">Yes</string>
+    <string name="delete_popup_no">No</string>
+    <string name="delete_popup_title">Delete Item</string>
+    <string name="delete_popup_content">Are you sure you want to delete?</string>
+
+
+</resources>

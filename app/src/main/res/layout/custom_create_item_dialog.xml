@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="280dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/white"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/custom_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="6dp"
+            android:textSize="24sp"
+            android:text="Please input the title."/>
+
+        <RelativeLayout
+            android:id="@+id/custom_dialog_content_rl"
+            android:layout_width="320dp"
+            android:layout_height="128dp"
+            android:layout_below="@+id/custom_dialog_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            >
+
+            <EditText
+                android:id="@+id/custom_dialog_et"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="top"
+                android:background="@drawable/layout_bg_round"
+                android:padding="12dp"
+                android:hint="Up to 100 characters."/>
+
+            <TextView
+                android:id="@+id/custom_dialog_max_input_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/custom_dialog_et"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="4dp"
+                android:text="0/100"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/custom_dialog_content_rl"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/custom_dialog_create_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="right|center_vertical"
+                android:text="CREATE"
+                android:textColor="@android:color/holo_red_light"
+                android:background="@drawable/custom_dialog_text_btn"/>
+
+            <Button
+                android:id="@+id/custom_dialog_cancle_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="left|center_vertical"
+                android:text="CANCEL"
+                android:textColor="@android:color/holo_red_light"
+                android:background="@drawable/custom_dialog_text_btn"/>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
