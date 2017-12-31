@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
     private void setCountList(){
         mCountDataList = new ArrayList<>();
 
+        /*
         CountDataModel mCountData1 = new CountDataModel();
         CountDataModel mCountData2 = new CountDataModel();
         CountDataModel mCountData3 = new CountDataModel();
@@ -111,12 +112,14 @@ public class MainActivity extends AppCompatActivity {
         mCountData3.setTitle("title three");
         mCountData3.setCountNum(3);
         mCountDataList.add(2, mCountData3);
+        */
+
     }
 
     private void addCountList(String _str){
         CountDataModel mCountData = new CountDataModel();
         mCountData.setTitle(_str);
-        mCountData.setCountNum(mCountDataList.size()+1);
+        mCountData.setCountNum(0);
 
         mCountDataList.add(mCountData);
 

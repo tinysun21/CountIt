@@ -5,6 +5,8 @@
     <!-- Toast Messages -->
     <string name="no_input_title_error">Please input title of the new item.</string>
     <string name="delete_item_complete">The item has been deleted.</string>
+    <string name="plus_item_alert">You can not add more than 100.</string>
+    <string name="minus_item_alert">You can not subtract below zero.</string>
 
     <!-- POPUP -->
     <string name="delete_popup_yes">Yes</string>
