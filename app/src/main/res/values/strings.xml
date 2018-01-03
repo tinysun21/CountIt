@@ -1,14 +1,28 @@
 <resources>
     <string name="app_name">Count It</string>
-    <string name="action_settings">Language</string>
+
+    <!-- Menu -->
+    <string name="menu_save">Save</string>
+    <string name="menu_restore">Restore</string>
+    <string name="menu_delete_all">Delete All</string>
+    <string name="menu_language">Language</string>
+    <string name="menu_last_saved">Saved: </string>
 
     <!-- Toast Messages -->
     <string name="no_input_title_error">Please input title of the new item.</string>
     <string name="delete_item_complete">The item has been deleted.</string>
     <string name="plus_item_alert">You can not add more than 100.</string>
     <string name="minus_item_alert">You can not subtract below zero.</string>
+    <string name="realm_user_data_read_error">An error occured while reading data.</string>
+    <string name="realm_user_data_save_error">An error occured while saving data.</string>
+    <string name="realm_user_data_save_success">Save data successfully.</string>
+    <string name="realm_user_data_restore_success">Restored successfully.</string>
 
-    <!-- POPUP -->
+    <!-- Create POPUP -->
+    <string name="create_popup_et_hint">Please input the title.</string>
+    <string name="create_popup_et_max_input">0/50</string>
+
+    <!-- Delete POPUP -->
     <string name="delete_popup_yes">Yes</string>
     <string name="delete_popup_no">No</string>
     <string name="delete_popup_title">Delete Item</string>

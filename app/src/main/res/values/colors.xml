@@ -3,4 +3,15 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="holo_orange_light">#FFFFBB33</color>
+    <color name="holo_orange_dark">#ffff8800</color>
+    <color name="holo_red_light">#ff4444</color>
+
+    <!-- Custom Color -->
+    <color name="custom_brown">#993800</color>
+    <color name="custom_gray_light">#EAEAEA</color>
+
 </resources>

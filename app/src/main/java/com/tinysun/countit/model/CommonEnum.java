@@ -8,6 +8,11 @@ import com.tinysun.countit.R;
 
 public class CommonEnum {
 
+    public static final String LOG_PREFIX = "COUNT_IT_LOG";
+    public static final int GET_REALM_DATA_INITIAL = 0;
+    public static final int GET_REALM_DATA_SAVE = 1;
+    public static final int GET_REALM_DATA_RESTORE = 2;
+
     // 카운트 이미지
     public enum CountImageResource{
 

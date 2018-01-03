@@ -27,8 +27,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
-                android:textSize="18sp"
-                android:text=""/>
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/custom_brown"/>
 
             <TextView
                 android:id="@+id/main_card_item_title_num"

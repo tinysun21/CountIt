@@ -6,17 +6,80 @@
     android:layout_height="match_parent"
     tools:context="com.tinysun.countit.view.MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/custom_brown"
+        android:textSize="36dp"
+        android:layout_marginTop="0dp"
+        android:text="2018.01.02 01:54"/>
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="60dp"
+        android:theme="@style/ToolbarTheme">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:contentInsetLeft="0dp"
+            android:contentInsetStart="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetEnd="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
+            app:logo="@mipmap/count_image_logo_white">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/toolbar_title_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_alignParentTop="true"
+                    android:gravity="left|bottom"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="@string/app_name"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_below="@+id/toolbar_title_tv"
+                    android:gravity="left|top">
+
+                    <TextView
+                        android:id="@+id/toolbar_save_title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:text="@string/menu_last_saved"
+                        android:gravity="left|top" />
+
+                    <TextView
+                        android:id="@+id/toolbar_save_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:text=""
+                        android:gravity="left|top"
+                        android:layout_toRightOf="@+id/toolbar_save_title_tv"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+
+        </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 

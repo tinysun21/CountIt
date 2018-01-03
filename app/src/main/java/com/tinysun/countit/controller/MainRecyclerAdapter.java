@@ -1,4 +1,4 @@
-package com.tinysun.countit.view;
+package com.tinysun.countit.controller;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -15,9 +15,8 @@ import android.widget.Toast;
 
 import com.tinysun.countit.R;
 import com.tinysun.countit.model.CommonEnum;
-import com.tinysun.countit.model.CountDataModel;
 
-import java.util.ArrayList;
+import static com.tinysun.countit.model.CountDataListStatic.mCountDataListStatic;
 
 /**
  * Created by YS CHOI on 2017-12-30.
@@ -26,12 +25,9 @@ import java.util.ArrayList;
 public class MainRecyclerAdapter extends RecyclerView.Adapter<MainRecyclerAdapter.ViewHolder> {
 
     private Context context;
-    private ArrayList<CountDataModel> mCountDataList;
 
-    public MainRecyclerAdapter(Context _context, ArrayList<CountDataModel> _mCountDataList){
+    public MainRecyclerAdapter(Context _context){
         context = _context;
-
-        mCountDataList = _mCountDataList;
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
@@ -111,49 +107,49 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter<MainRecyclerAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int i){
-        viewHolder.itemTitleTv.setText(mCountDataList.get(i).getTitle());
-        viewHolder.itemCountTv.setText(Integer.toString(mCountDataList.get(i).getCountNum()));
-        setImageCountView(viewHolder.imageGroupRl, mCountDataList.get(i).getCountNum());
+        viewHolder.itemTitleTv.setText(mCountDataListStatic.get(i).getTitle());
+        viewHolder.itemCountTv.setText(Integer.toString(mCountDataListStatic.get(i).getCountNum()));
+        setImageCountView(viewHolder.imageGroupRl, mCountDataListStatic.get(i).getCountNum());
     }
 
     @Override
     public int getItemCount() {
-        return mCountDataList.size();
+        return mCountDataListStatic.size();
     }
 
 
     public void removeItem(int position) {
-        mCountDataList.remove(position);
+        mCountDataListStatic.remove(position);
         notifyItemRemoved(position);
-        notifyItemRangeChanged(position, mCountDataList.size());
+        notifyItemRangeChanged(position, mCountDataListStatic.size());
 
-        Toast.makeText(context, R.string.delete_item_complete, Toast.LENGTH_LONG).show();
+        //Toast.makeText(context, R.string.delete_item_complete, Toast.LENGTH_LONG).show();
     }
 
     public void addCount(int _position, TextView _itemCountTv, RelativeLayout _imageGroupRl){
 
-        Integer oriCountNum = mCountDataList.get(_position).getCountNum();
+        Integer oriCountNum = mCountDataListStatic.get(_position).getCountNum();
         if(oriCountNum >= CommonEnum.CountMaxValue.COUNT_MAX_VALUE.getCountMaxValue()){
             Toast.makeText(context, R.string.plus_item_alert, Toast.LENGTH_LONG).show();
             return;
         }
 
-        mCountDataList.get(_position).setCountNum(oriCountNum+1);
-        _itemCountTv.setText( String.valueOf(mCountDataList.get(_position).getCountNum()).toString() );
+        mCountDataListStatic.get(_position).setCountNum(oriCountNum+1);
+        _itemCountTv.setText( String.valueOf(mCountDataListStatic.get(_position).getCountNum()).toString() );
 
         setImageCountView(_imageGroupRl, oriCountNum+1);
     }
 
     public void minusCount(int _position, TextView _itemCountTv, RelativeLayout _imageGroupRl){
 
-        Integer oriCountNum = mCountDataList.get(_position).getCountNum();
+        Integer oriCountNum = mCountDataListStatic.get(_position).getCountNum();
         if(oriCountNum <= 0){
             Toast.makeText(context, R.string.minus_item_alert, Toast.LENGTH_LONG).show();
             return;
         }
 
-        mCountDataList.get(_position).setCountNum(oriCountNum-1);
-        _itemCountTv.setText( String.valueOf(mCountDataList.get(_position).getCountNum()).toString() );
+        mCountDataListStatic.get(_position).setCountNum(oriCountNum-1);
+        _itemCountTv.setText( String.valueOf(mCountDataListStatic.get(_position).getCountNum()).toString() );
 
         setImageCountView(_imageGroupRl, oriCountNum-1);
     }

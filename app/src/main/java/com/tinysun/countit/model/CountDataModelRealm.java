@@ -1,12 +1,18 @@
 package com.tinysun.countit.model;
 
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.Required;
+
 /**
  * Created by YS CHOI on 2017-12-31.
  */
 
-public class CountDataModel {
+public class CountDataModelRealm extends RealmObject{
 
+    @PrimaryKey
     private int idx;
+    @Required
     private String title;
     private int countNum;
 
